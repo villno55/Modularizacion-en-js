@@ -1,7 +1,8 @@
-export function enRango(num) {
-  if (num >= 10 && num <= 50) {
-    return "Está en el rango";
+export function enRango(numer) {
+  if (numer >= 10 && numer <= 50) {
+    return `Está en el rango (${numer})`;
   } else {
-    return "Fuera del rango";
+    return `Fuera del rango (${numer})`;
   }
 }
+
