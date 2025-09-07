@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alcancía</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      box-sizing: border-box;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .acciones {
+      margin: 15px 0;
+    }
+    .acciones button,
+    .acciones img {
+      margin: 5px;
+      cursor: pointer;
+    }
+    input {
+      width: 80px;
+      padding: 5px;
+      margin: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mi Alcancía</h1>
+
+    <div class="acciones">
+      <p>Agregar monedas:</p>
+      <img id="img200" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/200_COP_Anverso_AnT.png">
+      <img id="img500" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/500_COP_Anverso_Ant.png">
+      <img id="img1000" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/1000_COP_Anverso_Ant.png"> <!--puse la misma foto por no encontré la de mil-->
+    </div>
+
+    <div>
+      <label>Monedas de 200: <input type="text" id="txtMonedas200" readonly></label><br>
+      <label>Monedas de 500: <input type="text" id="txtMonedas500" readonly></label><br>
+      <label>Monedas de 1000: <input type="text" id="txtMonedas1000" readonly></label><br>
+      <label>Total Ahorrado: <input type="text" id="txtTotalAlcancia" readonly></label><br>
+    </div>
+
+    <div class="acciones">
+      <button id="btnRomper">Romper Alcancía</button>
+      <button id="btnNueva">Nueva Alcancía</button>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
