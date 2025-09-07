@@ -16,26 +16,59 @@
     }
     .container {
       background: #fff;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 25px;
+      border-radius: 12px;
       width: 90%;
-      max-width: 600px;
-      box-sizing: border-box;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      max-width: 500px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
     }
     .acciones {
-      margin: 15px 0;
+      margin: 20px 0;
     }
-    .acciones button,
     .acciones img {
-      margin: 5px;
+      width: 80px;
+      margin: 10px;
       cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .acciones img:hover {
+      transform: scale(1.1);
+    }
+    .resultados {
+      margin: 20px 0;
+      text-align: left;
+    }
+    .resultados label {
+      display: block;
+      margin: 10px 0;
+      font-weight: bold;
     }
     input {
-      width: 80px;
-      padding: 5px;
-      margin: 5px;
+      width: 120px;
+      padding: 6px;
       text-align: center;
+    }
+    .botones {
+      margin-top: 20px;
+    }
+    .botones button {
+      margin: 8px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #4CAF50;
+      color: white;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .botones button:hover {
+      background: #45a049;
     }
   </style>
 </head>
@@ -44,20 +77,20 @@
     <h1>Mi Alcancía</h1>
 
     <div class="acciones">
-      <p>Agregar monedas:</p>
-      <img id="img200" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/200_COP_Anverso_AnT.png">
-      <img id="img500" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/500_COP_Anverso_Ant.png">
-      <img id="img1000" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/1000_COP_Anverso_Ant.png"> <!--puse la misma foto por no encontré la de mil-->
+      <p><b>Agregar monedas:</b></p>
+      <img id="img200" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/200_COP_Anverso_AnT.png" alt="200 pesos">
+      <img id="img500" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/500_COP_Anverso_Ant.png" alt="500 pesos">
+      <img id="img1000" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/500_COP_Anverso_Ant.png" alt="1000 pesos"> <!--No encontré foto de mil por eso la reperi-->
     </div>
 
-    <div>
-      <label>Monedas de 200: <input type="text" id="txtMonedas200" readonly></label><br>
-      <label>Monedas de 500: <input type="text" id="txtMonedas500" readonly></label><br>
-      <label>Monedas de 1000: <input type="text" id="txtMonedas1000" readonly></label><br>
-      <label>Total Ahorrado: <input type="text" id="txtTotalAlcancia" readonly></label><br>
+    <div class="resultados">
+      <label>Monedas de 200: <input type="text" id="txtMonedas200" readonly></label>
+      <label>Monedas de 500: <input type="text" id="txtMonedas500" readonly></label>
+      <label>Monedas de 1000: <input type="text" id="txtMonedas1000" readonly></label>
+      <label>Total Ahorrado: <input type="text" id="txtTotalAlcancia" readonly></label>
     </div>
 
-    <div class="acciones">
+    <div class="botones">
       <button id="btnRomper">Romper Alcancía</button>
       <button id="btnNueva">Nueva Alcancía</button>
     </div>
