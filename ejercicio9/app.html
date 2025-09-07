@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Contactos vlacho</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    form {
+      background: #1c1c1c;
+      padding: 15px 20px;
+      border: 1px solid #444;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      width: 320px;
+    }
+    fieldset {
+      border: none;
+      padding: 0;
+    }
+    label {
+      display: block;
+      margin-bottom: 12px;
+      font-weight: bold;
+      color: #ccc;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      border: 1px solid #666;
+      border-radius: 4px;
+      background: #000;
+      color: #fff;
+      box-sizing: border-box;
+    }
+    input::placeholder {
+      color: #777;
+    }
+    .botones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    input[type="submit"] {
+      flex: 1;
+      border: none;
+      color: #fff;
+      padding: 8px 0;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      background: #333;
+      transition: background 0.3s;
+    }
+    input[type="submit"]:hover {
+      background: #555;
+    }
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 700px;
+      background: #1c1c1c;
+      color: #fff;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 8px 12px;
+      text-align: center;
+    }
+    th {
+      background: #000;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background: #2a2a2a;
+    }
+    tr:nth-child(odd) {
+      background: #1c1c1c;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h1 class="titulo">Agenda de contactos</h1>
+
+    <form method="post" action="/">
+      <fieldset>
+
+        <label>Identificación
+          <input type="number" name="identificacion" placeholder="pone tu cédula/t.j" required minlength="10">
+        </label>
+
+        <label>Nombre
+          <input type="text" name="nombre" placeholder="pone tu nombre" required minlength="3">
+        </label>
+
+        <label>Apellido
+          <input type="text" name="apellido" placeholder="Mosquera" required minlength="5">
+        </label>
+
+        <label>Correo
+          <input type="email" name="correo" placeholder="adsotrabajos24@gmail.com" required>
+        </label>
+
+        <label>Celular
+          <input type="tel" name="celular" placeholder="3150000000" required minlength="10">
+        </label>
+
+        <div class="botones">
+          <input type="submit" value="Agregar">
+          <input type="submit" value="Consultar">
+          <input type="submit" value="Actualizar">
+          <input type="submit" value="Eliminar">
+        </div>
+
+      </fieldset>
+    </form>
+  </section>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>Celular</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script type="module" src="./main.js"></script>
+
+</body>
+</html>
